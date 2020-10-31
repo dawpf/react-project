@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
+import MyRouter from './router/index'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+
+  // 去除严格模式,处理控制台报错
+
+  <MyRouter />
+  ,
   document.getElementById('root')
 );
 
