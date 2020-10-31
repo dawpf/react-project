@@ -67,9 +67,9 @@ class MyRouter extends React.Component {
 
         </Switch>
 
-
+        {/* 
         <li><Link to='/'>home页面</Link></li>
-        <li><Link to='/login'>login页面</Link></li>
+        <li><Link to='/login'>login页面</Link></li> */}
 
       </Router>
     )
