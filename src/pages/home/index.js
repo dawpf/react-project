@@ -4,7 +4,8 @@ class Home extends React.Component {
 
   render () {
     return (
-      <div>这是home页面
+      <div>
+        <h1>这是home页面</h1>
         {this.props.children}
       </div>
     )
