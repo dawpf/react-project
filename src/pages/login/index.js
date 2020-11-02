@@ -1,9 +1,30 @@
 import React from "react"
 import './index.less'
 
+import {getLoginData,postLoginData,postUuLoginData} from '../../api/login'
+
 class Login extends React.Component {
   componentDidMount(){
     console.log('this.props.location',this.props.location);
+    console.log('processprocessprocessprocess',process.env.NODE_ENV);
+    getLoginData({name:'zs'})
+    // postLoginData({name:'ww'})
+    const payLoad = {
+      appId: "",
+      channel_id: 4,
+      marketChannel: "",
+      osType: "1",
+      packageName: "",
+      phoneModel: "",
+      product: "2",
+      sign: "fd5ee6e8fdf61a8d258a2f6185070c47",
+      sysVer: "",
+      time: "1604309105",
+      token: "5783a6ead5c99b2907bf8b84a1c5a166",
+      udid: "",
+      ver: "3.1.0"
+    }
+    postUuLoginData(payLoad)
   }
 
 
