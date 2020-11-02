@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 // import App from './App';
 import MyRouter from './router/index'
 import reportWebVitals from './reportWebVitals';
 
+// 引入状态管理
+import { Provider } from "react-redux";
+import store from './store'
+
 ReactDOM.render(
 
   // 去除严格模式,处理控制台报错
 
-  <MyRouter />
+  // 使用 Provider 包裹组件
+  <Provider store={store}>
+    <MyRouter />
+  </Provider>
+  
   ,
   document.getElementById('root')
 );
