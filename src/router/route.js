@@ -21,6 +21,10 @@ const User = Loadable({
   loading: Loading,
   loader: () => import('../pages/user')
 });
+const News = Loadable({
+  loading:Loading,
+  loader:()=>import('../pages/news')
+})
 
 const routes = [
   {
@@ -37,6 +41,11 @@ const routes = [
         path: '/user',
         exact: true,
         component: User
+      },
+      {
+        path: '/news',
+        exact: true,
+        component: News
       }
     ]
   },

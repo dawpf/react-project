@@ -11,6 +11,8 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 import store from './store'
 
+import 'lib-flexible'
+
 ReactDOM.render(
 
   // 去除严格模式,处理控制台报错

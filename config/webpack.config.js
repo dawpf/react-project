@@ -78,6 +78,9 @@ const hasJsxRuntime = (() => {
   }
 })();
 
+// 添加rem布局设置
+const px2rem = require('postcss-px2rem')
+
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function (webpackEnv) {
@@ -134,6 +137,7 @@ module.exports = function (webpackEnv) {
             // so that it honors browserslist config in package.json
             // which in turn let's users customize the target behavior as per their needs.
             postcssNormalize(),
+            px2rem({remUnit:37.5}),  // 添加rem布局设置
           ],
           sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
         },

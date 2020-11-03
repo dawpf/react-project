@@ -1,14 +1,18 @@
 import React from "react"
 import './index.less'
 
-import {getLoginData,postLoginData,postUuLoginData} from '../../api/login'
+import {getLoginData, postLoginData, postUuLoginData} from '../../api/login'
 
 class Login extends React.Component {
   componentDidMount(){
     console.log('this.props.location',this.props.location);
     console.log('processprocessprocessprocess',process.env.NODE_ENV);
+
+    // 测试二次封装axios
     getLoginData({name:'zs'})
-    // postLoginData({name:'ww'})
+    postLoginData({name:'ww'})
+
+    // 测试反向代理
     const payLoad = {
       appId: "",
       channel_id: 4,
